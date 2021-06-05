@@ -30,7 +30,7 @@ def geoencoding(address_input):
     """Get latitude and longitude of an input address using position stack. 
     Returns a tuple with lat, lon coordinates of address"""
     url = 'http://api.positionstack.com/v1/forward'
-    params = {'access_key': my_secret_access_key,
+    params = {'access_key': st.secrets["my_secret_access_key"],
     'query': address_input,
     'limit': 1}
     resp = requests.get(url=url, params=params)
